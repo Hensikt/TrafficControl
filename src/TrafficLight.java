@@ -2,19 +2,21 @@ public class TrafficLight {
 
     private int id;
     private int numberOfLights;
-    private int defaultColor;
+    private int standartColor;
 
     public TrafficLight() {
         id = 0;
         numberOfLights = 3;
-        defaultColor = 1;
+        standartColor = 1;
     }
 
+/** Counts all the lights **/
     public TrafficLight(int id, int numberOfLights) {
         this.id = id;
         this.numberOfLights = numberOfLights;
     }
 
+/** shows the color that is selected **/
     public String showColor(int light) {
 
         String result;
@@ -39,10 +41,12 @@ public class TrafficLight {
         return result;
     }
 
+/** shows the Id that is  **/
     public int showId() {
        return id;
     }
 
+/** shows the color and Id in a string **/
     public void showColorAndId(int light) {
         String result;
         result = showColor(light);
@@ -54,8 +58,24 @@ public class TrafficLight {
         );
     }
 
+/** checks if the number is positive or not **/
     public boolean isPositiveNumber(int number) {
         return number >= 0;
     }
 
+    public int getNumberOfLights() {
+        return numberOfLights;
+    }
+
+    public void setNumberOfLights(int numberOfLights) {
+        this.numberOfLights = numberOfLights;
+    }
+
+    public int getStandartColor() {
+        return standartColor;
+    }
+
+    public void setStandartColor(int standartColor) {
+        this.standartColor = standartColor;
+    }
 }
